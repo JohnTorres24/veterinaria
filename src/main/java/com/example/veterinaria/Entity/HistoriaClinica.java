@@ -1,5 +1,6 @@
 package com.example.veterinaria.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -24,5 +25,6 @@ public class HistoriaClinica {
 
     @OneToOne
     @JoinColumn(name = "mascota_id")
+    @JsonIgnore
     private Mascota mascota;
 }
